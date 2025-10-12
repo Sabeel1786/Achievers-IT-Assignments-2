@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner img {
+            width: 34vw;
+            height: 72vh;
+            object-fit: cover;
+
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            margin: 90px;
+        }
+
+        .btn button {
+            align-items: center;
+            justify-content: center;
+            width: 16.7vw;
+            height: 4vh;
+            margin: 0px 2px;
+            background-color: #663399;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="banner">
+            <img src="https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1458&amp;q=80"
+                alt="first-image">
+            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"
+                alt="second-image">
+            <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"
+                alt="third-image">
+            <img src="https://images.unsplash.com/photo-1599561046251-bfb9465b4c44?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1492&amp;q=80"
+                alt="fourth-image">
+        </div>
+        <div class="btn">
+            <button id="Prev">Prev</button>
+            <button id="Next">Next</button>
+        </div>
+    </div>
+
+
+    <script>
+        const slideShow = document.querySelectorAll(".banner img")
+        const Prev = document.getElementById("Prev")
+        const Next = document.getElementById("Next")
+
+        let index = 0;
+
+        const totla = slideShow.length
+
+        function showSlide(n) {
+            for (let i = 0; i < totla; i++) {
+                slideShow[i].style.display = "none";
+            }
+            slideShow[n].style.display = "block";
+        }
+
+        showSlide(index)
+
+        setInterval(() => {
+            index++;
+            if (index >= totla) {
+                index = 0;
+            }
+            showSlide(index);
+        }, 2000);
+
+        Prev.addEventListener("click", () => {
+            index--;
+            if (index < 0) {
+                index =totla-1;
+            }
+            showSlide(index)
+        })
+        Next.addEventListener("click", () => {
+            index++;
+            if (index >= totla) {
+                index = 0;
+            }
+            showSlide(index)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            border: 3px solid black;
+            padding: 10px;
+
+        }
+
+        ul li {
+            border: 2px solid black;
+            padding: 2px;
+        }
+
+        .highlight {
+            background-color: red;
+            color: white;
+
+        }
+
+        #box p {
+            display: none;
+        } */
+        /* .banner img {
+            width: 60vw;
+            height: 70vh;
+        }
+
+        .banner {
+            text-align: center;
+        } */
+
+        body {
+            background-color: blue;
+            padding: 0px;
+            margin: 0px;
+            height: 2000vh;
+        }
+
+        .scroll {
+            width: auto;
+            height: 80vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <button>Click And See the Magic</button>
+    </div> -->
+    <!-- <form>
+        <input type="text" id="fullname" placeholder="Enter Your Full Name">
+    </form> -->
+    <!-- <form>
+        <input type="email" id="email" placeholder="Enter Your Email">
+    </form>
+    <form>
+        <input type="tel" id="Phone" placeholder="Enter Your Phone Number">
+    </form>
+    <form>
+        <input type="password" id="password" placeholder="Enter Your password">
+    </form> -->
+    <!-- <div>
+        <ul type="none">
+            <li>Rahul</li>
+            <li>Danish</li>
+            <li>Sabeel</li>
+            <li>Likhit</li>
+        </ul>
+    </div> -->
+    <!-- <div id="box">
+        Top Secret Don,t hover me
+        <p id="hoverOverMe">Hi I was hidden</p>
+    </div> -->
+    <!-- <div class="banner">
+        <img src="https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1458&amp;q=80"
+            alt="first-image">
+
+        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"
+            alt="second-image">
+    </div> -->
+
+
+    <script>
+
+        // <!-- 1.) Difference between Event bubbling and Event capturing? Write an example. -->
+        // const btn = document.querySelector("button")
+        // btn.addEventListener("click", (e) => {
+        //     console.log("Button was clicked", e)
+        // })
+        // const div = document.querySelector("div")
+        // div.addEventListener("click", () => {
+        //     console.log("div was clicked")
+        // })
+
+        //  const btn = document.querySelector("button")
+        // btn.addEventListener("click", (e) => {
+        //     e.stopPropagation()
+        //     console.log("Button was clicked", e)
+        // })
+
+
+
+        // 2.) How do you create and remove an element in dom?
+        // const div = document.createElement("div")
+        // const btn = document.createElement("button")
+        // div.appendChild(btn)
+        // console.log(div)
+
+        // const textBtn = document.createTextNode("Click Me")
+        // btn.append(textBtn)
+
+        // div.removeChild(btn)
+
+
+
+        //  3.) Create a button that counts the number of times it has been clicked. Display the counter in a <span> element.
+        // let count = 0;
+        // function clicked() {
+        //     return `${count++} clicked`;
+
+        // }
+        // const btn = document.querySelector("button")
+        // btn.addEventListener("click", () => {
+        //     console.log(clicked());
+        // })
+
+
+        // 4.) Detect and display the key that the user presses on the keyboard.
+        // const type = document.getElementById("fullname")
+        // type.addEventListener("keyup", (e) => {
+        //     const value = e.target.value;
+        //     console.log(value);
+        // })
+
+
+
+        //5.) Track and display the mouse's current X and Y coordinates as the user moves the
+        // mouse over a <div>.
+        // const div = document.querySelector("div")
+        // div.addEventListener("click",(e)=>{
+        //     console.log(e.offsetX);
+        //     console.log(e.offsetY);
+        // })
+
+        // 6.) Change the background color of a <div> when it's double-clicked.
+        // const ClickColor = document.getElementsByTagName("li")
+        // for (let i = 0; i < ClickColor.length; i++) {
+        //     ClickColor[i].addEventListener("dblclick", (e) => {
+        //        e.target.classList.toggle("highlight")
+        //     })
+        // }
+
+        // 7.) When the user hovers over a <div>, display some hidden text. Hide the text when the user stops hovering.
+        // const Hidden =document.getElementById("box")
+        // const hoverOverMe =document.getElementById("hoverOverMe")
+
+        // Hidden.addEventListener("mouseenter",()=>{
+        //     hoverOverMe.style.display = "block";
+        // })
+        // Hidden.addEventListener("mouseleave",()=>{
+        //     hoverOverMe.style.display = "none";
+        // })
+
+        // 8.) Create an input field that displays how many characters the user has typed
+        // const type = document.getElementById("fullname")
+        // type.addEventListener("keyup", (e) => {
+        //     const value = e.target.value;
+        //     const ValueLength = value.length;
+        //     console.log(`${value},${ValueLength}`);
+        // })
+
+        // 9.) When the user clicks on a <div>, change the text inside it.
+        // const btn = document.querySelector("div");
+        // console.log(btn);
+        // btn.addEventListener("click", () => {
+        //     btn.innerHTML = "sabeel"
+        // })
+
+        //  10.) When the user types in an input field, automatically convert the text to uppercase
+        // const Converted = document.querySelector("form")
+        // const input = document.querySelector("input")
+        // input.addEventListener("keyup", () => {
+        //     input.value = input.value.toUpperCase();
+        // });
+
+        // 11.) Change an image to another when the user hovers over it and revert to the original
+        // image when the user stops hovering.
+        // const banner = document.querySelectorAll(".banner img")
+        // const img_1=document.querySelector("img")
+        // const img_2=document.querySelector("img")
+        // console.log(img_1);
+
+        // console.log(banner);
+
+        // let index = 0;
+        // const total_banner = banner.length;
+
+        // function showSlide(n) {
+        //     for (let i = 0; i < total_banner; i++) {
+        //         banner[i].style.display = "none";
+        //     }
+        //     banner[n].style.display = "block";
+        // }
+        // showSlide(index)
+
+
+        // img_1.addEventListener("mouseover",()=>{
+        //     index++;
+        //     showSlide(index)
+        // })
+        // img_1.addEventListener("mouseleave",()=>{
+        //     index--;
+        //     showSlide(index)
+        // })
+
+        // 12.) Change the background color of the page when the user scrolls past a certain
+        // point.
+        // window.addEventListener("scroll", () => {
+        //     if (window.scrollY > 4000) {
+        //         document.body.style.backgroundColor = "red";
+        //     }
+        //     else if (window.scrollY > 2000) {
+        //         document.body.style.backgroundColor = "pink";
+
+        //     }
+        //     else {
+        //         document.body.style.backgroundColor = "blue";
+        //     }
+        // });
+
+        // console.log(window.scrollY);
+        // console.log(window.scrollX);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

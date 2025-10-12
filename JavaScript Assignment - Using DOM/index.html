@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //making navbar//
+        const Navbar = document.createElement("nav")
+        const items = ["Home", "About", "Services", "Contact"]
+        Navbar.setAttribute("class", "navbar")
+        const Left = document.createElement("div")
+        const right = document.createElement("div")
+        Left.setAttribute("class", "leftEle")
+        right.setAttribute("class", "rightEle")
+        Navbar.appendChild(Left)
+        Navbar.appendChild(right)
+
+        const text1 = document.createTextNode("My Website")
+        Left.append(text1)
+        let ele = ""
+
+        for (let i = 0; i < items.length; i++) {
+            const span = document.createElement("span");
+            span.textContent = items[i];
+            span.style.margin = "0 15px"; // adds space between items
+            right.appendChild(span);
+        }
+        right.append(ele)
+
+        //styling navbar//
+        Navbar.style.backgroundColor = "black";
+        Navbar.style.color = "white";
+
+        //flexing content//
+
+        Navbar.style.display = "flex";
+        Navbar.style.justifyContent = "space-between"
+        Navbar.style.padding = "2px";
+        Navbar.style.width = "100%"
+        Navbar.style.height = "10vh"
+        Left.style.alignContent = "center"
+        right.style.alignContent = "center"
+        right.style.margin = "0 15px";
+
+        //banner part//
+        const banner = document.createElement("div")
+        banner.setAttribute("class", "bannerCont")
+        const B_Image = document.createElement("img");
+        const B_content = document.createElement("div")
+        banner.appendChild(B_Image)
+        banner.appendChild(B_content)
+
+        //adding image and content//
+        B_Image.src = "banner.jpeg"
+        B_Image.alt = "Banner Image";
+
+        B_Image.style.width = "100%"
+        B_Image.style.height = "70vh";
+        B_Image.style.zIndex = "1";
+
+        //banner content//
+        const text3 = document.createTextNode("WELCOME TO MY WEBSITE");
+        B_content.append(text3);
+        B_content.style.fontSize = "40px"
+        B_content.style.color = "white";
+        B_content.style.position = "relative";
+        B_content.style.textAlign = "center"
+        B_content.style.bottom = "180px";
+        B_content.style.fontWeight = "bold"
+
+
+        //hover //
+        right.addEventListener("mouseover", () => {
+            right.style.color = "yellow";       // color change on hover
+        });
+
+        right.addEventListener("mouseout", () => {
+            right.style.color = "white";        // revert to original
+
+        });
+        document.getElementsByTagName("body")[0].append(Navbar)
+        document.getElementsByTagName("body")[0].append(banner)
+
+    </script>
+
+</body>
+
+</html>
