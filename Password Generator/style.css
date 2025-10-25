@@ -1,0 +1,68 @@
+
+ body {
+    background-color: #3B3B98;
+    font-family: sans-serif;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+}
+
+
+ .container{
+     height: 59vh;
+     width: 22vw;
+     background-color: #23235B;
+     color: white;
+ }
+
+ .container h2{
+    text-align: center;
+    padding: 15px;
+    
+ }
+
+ .Result-container {
+     width: 20vw;
+     height: 7vh;
+     background-color: #151537;
+     border: none;
+     text-align: center;
+     margin:15px;
+ }
+
+ #Result-btn {
+     background-color: #3B3B98;
+     color: white;
+     border: none;
+     height: 5vh;
+     width: 3vw;
+     margin: 7px;
+     margin-left: 250px;
+ }
+
+ .Genbtn button {
+     background-color: #3B3B98;
+     color: white;
+     border: none;
+     text-align: center;
+     width: 20vw;
+     height: 4vh;
+     margin:15px
+ }
+
+ .PassCont #passLength {
+     width: 55px;
+ }
+ .PassCont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 15px;
+    width: 20vw;
+    padding: 10px;
+ }
+input[type="checkbox"] {
+  accent-color:#005CC8;
+}

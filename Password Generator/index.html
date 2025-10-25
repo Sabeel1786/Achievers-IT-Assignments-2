@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Password Logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="Result-container">
+            <span id="Result"></span>
+            <button id="Result-btn">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+
+        <div class="box">
+            <div class="PassCont">
+                <label>Password Length</label>
+                <input type="number" id="passLength">
+            </div>
+            <div class="PassCont">
+                <label>Include uppercase letters</label>
+                <input type="checkbox" id="Upperlet">
+            </div>
+            <div class="PassCont">
+                <label>Include lowercase letters</label>
+                <input type="checkbox" id="Lowerlet">
+            </div>
+            <div class="PassCont">
+                <label>Include numbers</label>
+                <input type="checkbox" id="Numberval">
+            </div>
+            <div class="PassCont">
+                <label>Include symbols</label>
+                <input type="checkbox" id="Symbolval">
+            </div>
+        </div>
+        <div class="Genbtn">
+            <button id="Print-btn">Generate Password</button>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
