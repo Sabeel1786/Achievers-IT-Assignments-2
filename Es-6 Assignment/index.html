@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // TAsk-1
+        // const { a = 10, b = 20, c } = { a: 1, b: undefined, c: null };
+
+        // console.log(a, b, c ?? 30);
+
+        // Task 2: Given the object const obj = { a: { b: { c: 1 } }, d: 2 }; destructure to
+        // extract c and d in one line.
+
+        // const {a:{b:{c}},d}= { a: { b: { c: 1 } }, d: 2 };
+        // console.log(c,d);
+
+        // Task 3: Write a function “sum” that takes an object with properties a, b, and
+        // c as a parameter and returns their sum. Use destructuring in the function parameter.
+
+
+        // function sum({a,b,c}){
+        //     return a + b + c;
+        // }
+        // console.log(sum({a:10,b:20,c:20}))
+
+
+        // Task 4: Use array destructuring to extract the first and third elements into variables.
+        // Input: const arr = [1, 2, 3, 4, 5];
+
+        // const [a, ,c, , ,] = [1, 2, 3, 4, 5];
+        // console.log(a,c);
+
+
+        // Task 5: Given const key = "name" and const obj = { name: "John" }; use
+        // destructuring to extract the value of name using the key variable.
+
+        // const key = "name"
+        // const obj = {name:"Jhon"};
+
+        // const {[key]:name}=obj
+        // console.log(name);
+
+
+        // Task 6: Use optional chaining to safely call the function and access the value of c.
+        // Input: const obj = { a: { b: () => ({ c: 1 }) } };
+        // const obj = { a: { b: () => ({ c: 1 }) } };
+        // console.log(obj?.a?.b?.()?.c);
+
+        // Task 7: Use optional chaining to safely access the value of num.
+        //  Input: (i) const arr = [[{ num: 1 }]];
+        //  (ii) const arr = [{ a: [{ num: 1 }] }]
+
+        //  const arr = [[{ num: 1 }]];
+        //  console.log(arr?.[0]?.[0]?.num);
+
+        // const arr = [{ a: [{ num: 1 }] }];
+        // console.log(arr?.[0]?.a?.[0]?.num);
+
+
+        // Task 8: Given const obj = { a: { b: { c: 1 } } };, use optional chaining to
+        // access d inside c which does not exist. What would be the result?
+        // const obj = { a: { b: { c: 1 } } };
+        // console.log(obj?.a?.b?.c?.d);
+        // output:undefined
+
+        // Task 9: Create a function that takes two arrays and insert the second array in the middle of the first array.
+        // Examples
+        // tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]) ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // tuckIn([15,150], [45, 75, 35]) ➞ [15, 45, 75, 35, 150]
+
+
+        // const arr1 = [1,10];
+        // const arr2 = [2, 3, 4, 5, 6, 7, 8, 9];
+
+        // const arr3 = [15,150];
+        // const arr4 = [45, 75, 35];
+
+        // function InsertArr(arr1,arr2){
+        //     return[arr1[0],...arr2,arr1[1]]
+        // }
+        // console.log(InsertArr(arr1,arr2));
+        // console.log(InsertArr(arr3,arr4));
+
+        // // Task 10: Use nullish coalescing and logical OR to set a variable c to a if it’s
+        // // not null or undefined, otherwise to b, or to true if b is falsy.
+        // const a = undefined; 
+        // const b = false;
+
+        // let c = a ?? b;
+        // let x = b || true;
+
+        // Task 11: Given const obj = { a: { b: null } };, use a combination of optional
+        // chaining and logical AND to set a variable c to b only if a exists and is
+        // truthy.
+        // const obj = { a: { b: null } };
+        // let c = obj?.a&&obj.a.b;
+        //     console.log(c);
+
+        // Task 12: Write a function getUserAddress that takes a user object as an
+        // argument. The user object may have an address nested within, and you
+        // need to retrieve the street name. Use a combination of destructuring,
+        // optional chaining, and nullish coalescing to handle various scenarios
+        // efficiently.
+
+        // const user1 = {
+        //     name: 'John',
+        //     address: { street: { name: 'Main Street' } }
+        // };
+
+        // const user2 = { name: 'Jane', address: null };
+
+        // const user3 = { name: 'Bob' };
+
+        // function getUserAddress(user) {
+        //     const name = user?.address?.street?.name ?? "Street not available";
+        //     return name;
+        // }
+
+
+
+        // console.log(getUserAddress(user1));
+        // console.log(getUserAddress(user2));
+        // console.log(getUserAddress(user3));
+
+        // Task 13: Write a function validateUser that takes an object user as an
+        // argument and checks if user exists, has a name property, and if user.name
+        // is truthy. Use short-circuiting to handle these checks efficiently.
+
+        // const user1 = { name: 'John' };
+        // const user2 = { name: " "};
+        // const user3 = null;
+
+        // function validateUser(user){
+        //     const result = user?.name??null;
+        //     console.log(result);
+            
+        
+        // }
+           
+        // validateUser(user1)
+        // validateUser(user2)
+        // validateUser(user3)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
